@@ -36,8 +36,9 @@ Please watch a video introducing this lab assignment under the course's YouTube 
 
 ## Objectives
 
+- To experiment with control structures in three different programming languages.
 - To look "under the hood" at some control structures.
-- To continue the practice of using the Java bytecode.
+- To continue the practice of using the Java bytecode and explore bytecode related to control structures.
 
 ## Reading Assignment
 
@@ -57,7 +58,7 @@ Please go into the #labs channel in our Slack team and find the announcement tha
 
 ## Tasks
 
-For this laboratory assignment, you will complete a set of small experiments to gain a deeper understanding into scoping and storage management. Please navigate to the "writing/report.md" document to find outline of specific experiments and the tasks you are invited to engage in.
+For this laboratory assignment, you will complete a set of small experiments to gain a deeper understanding into control structures. Please navigate to the "writing/report.md" document to find outline of specific experiments and the tasks you are invited to engage in.
 
 ## Running and Testing
 
@@ -195,11 +196,11 @@ GitHub Actions CI is configured to check the program files for minimum requireme
 
 The grade that a student receives on this assignment will have the following components. In addition to these three main components, student's grade may be affected by their adherence or the lack of adherence to the [Code of Conduct](https://github.com/allegheny-computer-science-201-f2020/lab01-cs201f2020/blob/main/conduct.md) developed for this course.
 
-_Percentage of Correct GatorGrader Checks and GitHub Actions CI Build Status [up to 15%]_: Students are encouraged to repeatedly revise their submission to ensure that it passes all of GatorGrader's checks and receives a CI pass.
+_Percentage of Correct GatorGrader Checks and GitHub Actions CI Build Status [up to 40%]_: Students are encouraged to repeatedly revise their submission to ensure that it passes all of GatorGrader's checks and receives a CI pass.
 
 _Mastery of Technical Knowledge and Skills [up to 20%]_: Students will also receive a portion of their assignment grade when their program source files reveal that they have mastered all of the technical knowledge and skills developed during the completion of this lab. Since this lab assignment does not require significant implementation, this portion of the grade is not heavily weighted.
 
-_Mastery of Technical Writing [up to 65%]_: Students will receive a largest portion of this lab grade when the responses to the technical writing questions presented in the "writing/report.md" reveal a mastery of both writing skills and conceptual and technical knowledge. To receive this portion of the grade, the submitted writing should provide conceptually and technically accurate answers and have correct spelling, grammar, and punctuation in addition to following the rules of Markdown.
+_Mastery of Technical Writing [up to 40%]_: Students will receive a portion of this lab grade when the responses to the technical writing questions presented in the "writing/report.md" reveal a mastery of both writing skills and conceptual and technical knowledge. To receive this portion of the grade, the submitted writing should provide conceptually and technically accurate answers and have correct spelling, grammar, and punctuation in addition to following the rules of Markdown.
 
 ## Problems
 
