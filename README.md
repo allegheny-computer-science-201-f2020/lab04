@@ -48,7 +48,7 @@ To learn more about Java bytecode specification and instructions consider the fo
 
 - [The Java Virtual Machine Specification](http://docs.oracle.com/javase/specs/jvms/se8/html/index.html)
 - [Instructions listing](https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)
-- [JVM Instruction Set Documentation](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html).
+- [JVM Instruction Set Documentation](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html)
 
 If you have not done so already, please read all of the relevant [GitHub Guides](https://guides.github.com/) that explain how to use many of the features that GitHub provides. In particular, please make sure that you have read guides such as "Understanding the GitHub flow", "Mastering Markdown" and "Documenting Your Projects on GitHub"; each of them will help you to understand how to use both GitHub and GitHub Classroom.
 
@@ -58,13 +58,13 @@ Please go into the #labs channel in our Slack team and find the announcement tha
 
 ## Tasks
 
-For this laboratory assignment, you will complete a set of small experiments to gain a deeper understanding into control structures. Please navigate to the "writing/report.md" document to find outline of specific experiments and the tasks you are invited to engage in.
+For this laboratory assignment, you will complete a set of small experiments to gain a deeper understanding into control structures. Please navigate to the `writing/report.md` document to find outline of specific experiments and the tasks you are invited to engage in.
 
-## Running and Testing
+## Compiling, Running and Testing Programs
 
 ### Docker Commands
 
-We use Docker for this course. This provides an environment with the languages that will be used in the class and ensures that everyone uses the same versions for help and grading purposes. Follow the instructions below, which can also be found at the `progator` Docker image link provided below, to get started. Additionally, please watch the lab introduction video for a working example of how to access the Docker image for this course and how to mount a directory as a volume.
+We use Docker for this course. This provides an environment with the languages that will be used in the class and ensures that everyone uses the same versions for help and grading purposes. Follow the instructions below, which can also be found at the `progator` Docker image link provided below, to get started. 
 
 [progator Docker Image](https://hub.docker.com/repository/docker/janyljumadinova/progator)
 
@@ -132,8 +132,6 @@ In the Explorer frame, right click, and click on Open in Integrated Terminal. ![
 
 You now have a terminal in which you can run most typical Linux commands. Ubuntu 20.04 is running with VSCode. Most work will be completed in the terminal. You are encouraged to mount a directory as a volume as described in the documentation at [progator Docker Image](https://hub.docker.com/repository/docker/janyljumadinova/progator) so that you can have access to your local repository files, which can be accessed from the "environment" directory in "root".
 
-Please remember to stop the container after you are finished working in it. You can use the command: `docker container list` to see the ID of the running container, and `docker container stop container-ID` to stop the container by replacing `container-ID` with its actual ID.
-
 ### GatorGrader
 
 To assess the minimum completeness of the lab submission materials, you can use the GatorGrader tool. Once you have installed [Docker Desktop](https://www.docker.com/products/docker-desktop), you can use the following `docker run` command to start `gradle grade` as a containerized application, using the [DockaGator](https://github.com/GatorEducator/dockagator) Docker image available on [DockerHub](https://cloud.docker.com/u/gatoreducator/repository/docker/gatoreducator/dockagator).
@@ -145,14 +143,7 @@ docker run --rm --name dockagator \
   gatoreducator/dockagator
 ```
 
-This command will use `"$(pwd)"` (i.e., the current directory) as the project directory and `"$HOME/.dockagator"` as the cached GatorGrader directory. Please note that both of these directories must exist, although only the project directory must contain something. Generally, the project directory should contain the source code and technical writing of this assignment, as provided to a student through GitHub. Additionally, the cache directory should not contain anything other than directories and programs created by DockaGator, thus ensuring that they are not otherwise overwritten during the completion of the assignment. To ensure that the previous command will work correctly, you should create the cache directory by running the command `mkdir $HOME/.dockagator`. If the above `docker run` command does not work correctly on the Windows operating system, you may need to instead run the following command to work around limitations in the terminal window:
-
-```bash
-docker run --rm --name dockagator \
-  -v "$(pwd):/project" \
-  -v "$HOME/.dockagator:/root/.local/share" \
-  gatoreducator/dockagator
-```
+This command will use `"$(pwd)"` (i.e., the current directory) as the project directory and `"$HOME/.dockagator"` as the cached GatorGrader directory. Please note that both of these directories must exist, although only the project directory must contain something. Generally, the project directory should contain the source code and technical writing of this assignment, as provided to a student through GitHub. Additionally, the cache directory should not contain anything other than directories and programs created by DockaGator, thus ensuring that they are not otherwise overwritten during the completion of the assignment. To ensure that the previous command will work correctly, you should create the cache directory by running the command `mkdir $HOME/.dockagator`. 
 
 If you are running your program on a Windows Operating System, you should run the following command instead, replacing the word "user" with the username of your machine:
 
@@ -169,7 +160,7 @@ docker run -it --rm --name dockagator \
   gatoreducator/dockagator /bin/bash
 ```
 
-In Windows OS (replace `user` with your machine's username):
+In Windows OS you would run the following command (replacing `user` with your machine's username):
 
 ```bash
 docker run -it --rm --name dockagator -v "%cd%":/project -v "C:\Users\user/.dockagator":/root/.local/share gatoreducator/dockagator /bin/bash
