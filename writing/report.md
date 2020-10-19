@@ -10,7 +10,7 @@ Find the file `Lab4Short.java` in the "src" directory of your lab repository. Co
 
 TODO: Write a step-by-step description of the bytecode in a code block below, indicating what each line of the bytecode is responsible for. We are most interested in seeing how the bytecode demonstrates "short circuit evaluation" of the boolean`\verb$&&$'' operator, so be careful when explaining those parts. Specifically, you must identify the line where the short circuit happens.
 
-```
+```bash
 0: bipush 10        push the constant 10 onto the stack
 2: istore_1         pop the 10 and save it in i
 3: bipush 20        push 20 onto the stack
@@ -22,7 +22,7 @@ TODO: Write a step-by-step description of the bytecode in a code block below, in
 
 Recall from CMPSC 101 that a _recursive_ function or method is one that either directly or indirectly calls itself. The most frequently cited example is the factorial function, defined as follows:
 
-```
+```Java
 public static int factorial(int n) {
   if (n <= 0) {
     return 1;
@@ -42,7 +42,7 @@ Now implement the same program in Cobol using `Lab4Part2a.cbl` template.
 
 `cobc -x -free -o Lab4Part2a Lab4Part2a.cbl`
 
-Then, to run it, you can run the following command:
+- Then, to run it, you can run the following command:
 
 `./Lab4Part2a`
 
@@ -52,7 +52,7 @@ TODO: Compare and contrast control structures (conditionals and loops) in Java a
 
 Find the file "Lab4Part2b.java" in the "src" directory of your lab repository. Complete it by writing a recursive static int function named `recur` that is defined as follows:
 
-```
+```bash
 if i ≤ 0 or j ≤ 0, recur(i, j) = 0\.
 if i = j, recur(i,j) = i.
 if i > j, recur(i,j) = j.
@@ -67,7 +67,7 @@ Now implement the same program in C, using `Lab4Part2b.c` template.
 
 (but please don’t type `-o Lab4Part2b.c` because this will erase your C program!).
 
-Then, to execute it, type: `./Lab4Part2b`
+- Then, to execute it, type: `./Lab4Part2b`
 
 TODO: Compare and contrast control structures (conditionals and loops) in Java, C and in Cobol using these two sample programs you wrote. What are similarities? Are there any differences? How do control structures in Java and C compare to their execution in Cobol?
 
@@ -79,7 +79,7 @@ Is the for-loop in Java merely "syntactic sugar"? You probably learned in CMPSC 
 
 Find the file `Lab4ForLoop.java` in the "src" directory of your lab repository. Compile and produce Java bytecode. You should see something like this:
 
-```
+```bash
 public class Lab4ForLoop {
   public Lab4ForLoop();
     Code:
@@ -108,7 +108,7 @@ public class Lab4ForLoop {
 
 Variable "sum" is stored in location 1; the command "iload_1" pushes this onto the stack, the command "istore_1" pops the top value off the stack and stores it in sum. Similarly, variable "i" is stored in location 2, with corresponding remarks about "iload_2" and "istore_2". The program operates by pushing, popping, and computing with objects on the stack. Here are the steps in detail; you should follow through with the code and make sure you understand:
 
-```
+```bash
 0 iconst_0    push constant 0 onto the stack
 1 istore_1    pop stack and store in location 1 (sum = 0)
 2 iconst_0    push constant 0 onto the stack
