@@ -16,10 +16,10 @@ indent: 4
 
 # --> check the source code for various characteristics
 src:
-    Lab04Short.java:
+    Lab4Short.java:
             ConfirmFileExists
             CountMultipleLineComments --language Java --count 2 --exact
-            MatchFileFragment --fragment "int" --count 3 --exact
+            MatchFileFragment --fragment "int" --count 3
             MatchFileFragment --fragment "&&" --count 1 --exact
             MatchFileFragment --fragment "TODO" --count 0 --exact
             MatchFileFragment --fragment "Include your name" --count 0 --exact
@@ -35,7 +35,7 @@ src:
             MatchFileFragment --fragment "Include your name" --count 0 --exact
     Lab4Part2a.cbl:
             ConfirmFileExists
-            CountSingleLineComments --language Java --count 2
+            CountSingleLineComments --language Java --count 1
             #CountMultipleLineComments --language Java --count 2 --exact
             MatchFileFragment --fragment "IDENTIFICATION DIVISION" --count 1
             MatchFileFragment --fragment "PROGRAM-ID" --count 1
@@ -62,8 +62,8 @@ src:
             ConfirmFileExists
             #CountSingleLineComments --language Java --count 4
             CountMultipleLineComments --language Java --count 2
-            MatchFileFragment --fragment "func" --count 1 --exact
-            MatchFileFragment --fragment "for" --count 1 --exact
+            MatchFileFragment --fragment "func" --count 1
+            MatchFileFragment --fragment "for" --count 1
             MatchFileFragment --fragment "main" --count 0 --exact
             MatchFileFragment --fragment "TODO" --count 0 --exact
             MatchFileFragment --fragment "Include your name" --count 0 --exact
@@ -71,21 +71,21 @@ src:
             ConfirmFileExists
             #CountSingleLineComments --language Java --count 4
             CountMultipleLineComments --language Java --count 2
-            MatchFileFragment --fragment "func" --count 1 --exact
-            MatchFileFragment --fragment "while" --count 1 --exact
+            MatchFileFragment --fragment "func" --count 1
+            MatchFileFragment --fragment "while" --count 1
             MatchFileFragment --fragment "main" --count 0 --exact
             MatchFileFragment --fragment "TODO" --count 0 --exact
             MatchFileFragment --fragment "Include your name" --count 0 --exact
 # --> check the technical writing for various characteristics
 writing/report.md:
     ConfirmFileExists
-    CountFileWords --count 800
+    CountFileWords --count 600
     CountMarkdownTags --tag "heading" --count 9 --exact
     #CountMarkdownTags --tag "code" --count 3 --exact
     CountMarkdownTags --tag "code_block" --count 5 --exact
     #CountMarkdownTags --tag "list" --count 1
     MatchFileFragment --fragment "Add your name" --count 0 --exact
-    MatchFileFragment --fragment "TODO" --count 0 --exact
+    MatchFileFragment --fragment "TODO" --count 1 --exact
 
 # --> check that the number of commits in the Git repository is beyond a threshold
 CountCommits --count 10
